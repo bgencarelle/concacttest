@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : fracttest.cpp
-// Author      : 
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -8,7 +8,14 @@
 
 #include <iostream>
 #include "math.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <time.h>
+
 using namespace std;
+
+#define INT_MAX 65535
 
 uint64_t read_input(uint64_t input) {
 	bool valid = false;
@@ -16,6 +23,7 @@ uint64_t read_input(uint64_t input) {
 		if (cin.good()) {
 			//everything went well, we'll get out of the loop and return the value
 			valid = true;
+
 		} else {
 			//something went wrong, we reset the buffer's state to good
 			cin.clear();
@@ -35,7 +43,7 @@ uint64_t logpow10Func(uint64_t VarIn, uint8_t basein) {
 	return logpowOut;
 }
 uint64_t concatFunc(uint64_t a, uint64_t b, uint64_t c, uint8_t basecheck) {
-	uint base;
+	uint8_t base;
 	switch (basecheck) {
 	case 0:
 		base = 2;
@@ -95,4 +103,3 @@ int main() {
 	}
 
 }
-
